@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+    <img src="/img/0.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/1.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/2.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/3.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/4.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/5.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/6.jpg"  class="images" width="100px" height="100px">
+    <img src="/img/7.jpg"  class="images" width="100px" height="100px">
+</div>
+    <img src="" id="fullimage" width="800px" height="800px" style="display:none">
+
+    <script>
+        let fullimage = document.getElementById('fullimage');
+        let image = document.getElementById('image');
+
+        image.addEventListener('click', function(a){
+            if(a.target.classList.contains('images')){
+                fullimage.src = a.target.src;
+                fullimage.style.display = "block";
+            }
+        })
+
+    </script>
+
+
+
+</body>
+</html>
